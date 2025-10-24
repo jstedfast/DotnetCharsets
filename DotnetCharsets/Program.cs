@@ -11,7 +11,7 @@ namespace DotnetCharsets
             var encodings = Encoding.GetEncodings();
             Array.Sort(encodings, (a, b) => a.CodePage.CompareTo(b.CodePage));
 
-            WriteTableHeader("All");
+            WriteTableHeader("Complete set");
             foreach (var info in encodings)
             {
                 var encoding = Encoding.GetEncoding(info.CodePage);
@@ -19,7 +19,7 @@ namespace DotnetCharsets
             }
 
             Console.WriteLine();
-            WriteTableHeader("HeaderName != WebName");
+            WriteTableHeader("Encodings where HeaderName != WebName");
             foreach (var info in encodings)
             {
                 var encoding = Encoding.GetEncoding(info.CodePage);
@@ -28,7 +28,7 @@ namespace DotnetCharsets
             }
 
             Console.WriteLine();
-            WriteTableHeader("HeaderName != BodyName");
+            WriteTableHeader("Encodings where HeaderName != BodyName");
             foreach (var info in encodings)
             {
                 var encoding = Encoding.GetEncoding(info.CodePage);
@@ -37,7 +37,7 @@ namespace DotnetCharsets
             }
 
             Console.WriteLine();
-            WriteTableHeader("WebName != BodyName");
+            WriteTableHeader("Encodings where WebName != BodyName");
             foreach (var info in encodings)
             {
                 var encoding = Encoding.GetEncoding(info.CodePage);
@@ -46,7 +46,7 @@ namespace DotnetCharsets
             }
 
             Console.WriteLine();
-            WriteTableHeader("Extras");
+            WriteTableHeader("Extra Encodings");
             var extra = new int[] { 932, 949, 50220, 50221, 50222, 50225 };
             foreach (var codepage in extra)
             {
@@ -55,7 +55,7 @@ namespace DotnetCharsets
             }
 
             Console.WriteLine();
-            WriteTableHeader("Have Byte Order Marks");
+            WriteTableHeader("Encodings that have byte-order marks (BOMs)");
             foreach (var info in encodings)
             {
                 var encoding = Encoding.GetEncoding(info.CodePage);
@@ -66,7 +66,7 @@ namespace DotnetCharsets
             }
 
             Console.WriteLine();
-            WriteTableHeader("Unicode");
+            WriteTableHeader("Unicode Encodings");
             WriteCharsetInfo(Encoding.Unicode);
             WriteCharsetInfo(Encoding.BigEndianUnicode);
             WriteCharsetInfo(Encoding.UTF32);
@@ -75,9 +75,10 @@ namespace DotnetCharsets
 
         static void WriteTableHeader (string tableName)
         {
-            Console.WriteLine($"{tableName}:");
+            Console.WriteLine($"## {tableName}");
+            Console.WriteLine();
             Console.WriteLine("| CodePage | HeaderName              | BodyName                | WebName                 |");
-            Console.WriteLine("|---------:|------------------------:|------------------------:|------------------------:|");
+            Console.WriteLine("|:--------:|:-----------------------:|:-----------------------:|:-----------------------:|");
         }
 
         static void WriteCharsetInfo(Encoding encoding)

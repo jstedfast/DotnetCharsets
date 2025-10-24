@@ -5,7 +5,7 @@ Outputs a markdown table of charset encodings supported on the .NET Core runtime
 ## Complete set
 
 | CodePage | HeaderName              | BodyName                | WebName                 |
-|---------:|------------------------:|------------------------:|------------------------:|
+|:--------:|:-----------------------:|:-----------------------:|:-----------------------:|
 | 37       | ibm037                  | ibm037                  | ibm037                  |
 | 437      | ibm437                  | ibm437                  | ibm437                  |
 | 500      | ibm500                  | ibm500                  | ibm500                  |
@@ -126,13 +126,13 @@ Outputs a markdown table of charset encodings supported on the .NET Core runtime
 ## Encodings where HeaderName != WebName
 
 | CodePage | HeaderName              | BodyName                | WebName                 |
-|---------:|------------------------:|------------------------:|------------------------:|
+|:--------:|:-----------------------:|:-----------------------:|:-----------------------:|
 | 932      | iso-2022-jp             | iso-2022-jp             | shift_jis               |
 
 ## Encodings where HeaderName != BodyName
 
 | CodePage | HeaderName              | BodyName                | WebName                 |
-|---------:|------------------------:|------------------------:|------------------------:|
+|:--------:|:-----------------------:|:-----------------------:|:-----------------------:|
 | 1250     | windows-1250            | iso-8859-2              | windows-1250            |
 | 1251     | windows-1251            | koi8-r                  | windows-1251            |
 | 1252     | windows-1252            | iso-8859-1              | windows-1252            |
@@ -142,7 +142,7 @@ Outputs a markdown table of charset encodings supported on the .NET Core runtime
 ## Encodings where WebName != BodyName
 
 | CodePage | HeaderName              | BodyName                | WebName                 |
-|---------:|------------------------:|------------------------:|------------------------:|
+|:--------:|:-----------------------:|:-----------------------:|:-----------------------:|
 | 932      | iso-2022-jp             | iso-2022-jp             | shift_jis               |
 | 1250     | windows-1250            | iso-8859-2              | windows-1250            |
 | 1251     | windows-1251            | koi8-r                  | windows-1251            |
@@ -153,7 +153,7 @@ Outputs a markdown table of charset encodings supported on the .NET Core runtime
 ## Extra Encodings
 
 | CodePage | HeaderName              | BodyName                | WebName                 |
-|---------:|------------------------:|------------------------:|------------------------:|
+|:--------:|:-----------------------:|:-----------------------:|:-----------------------:|
 | 932      | iso-2022-jp             | iso-2022-jp             | shift_jis               |
 | 949      | ks_c_5601-1987          | ks_c_5601-1987          | ks_c_5601-1987          |
 | 50220    | iso-2022-jp             | iso-2022-jp             | iso-2022-jp             |
@@ -164,7 +164,7 @@ Outputs a markdown table of charset encodings supported on the .NET Core runtime
 ## Encodings that have byte-order marks (BOMs)
 
 | CodePage | HeaderName              | BodyName                | WebName                 |
-|---------:|------------------------:|------------------------:|------------------------:|
+|:--------:|:-----------------------:|:-----------------------:|:-----------------------:|
 | 1200     | utf-16                  | utf-16                  | utf-16                  |
 | 1201     | utf-16BE                | utf-16BE                | utf-16BE                |
 | 12000    | utf-32                  | utf-32                  | utf-32                  |
@@ -172,8 +172,9 @@ Outputs a markdown table of charset encodings supported on the .NET Core runtime
 | 65001    | utf-8                   | utf-8                   | utf-8                   |
 
 ## Unicode Encodings
+
 | CodePage | HeaderName              | BodyName                | WebName                 |
-|---------:|------------------------:|------------------------:|------------------------:|
+|:--------:|:-----------------------:|:-----------------------:|:-----------------------:|
 | 1200     | utf-16                  | utf-16                  | utf-16                  |
 | 1201     | utf-16BE                | utf-16BE                | utf-16BE                |
 | 12000    | utf-32                  | utf-32                  | utf-32                  |
